@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://terrian/TileMap_01.tres" type="TileSet" id=2]
+
+[node name="World" type="Node2D"]
+
+[node name="Beach" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Beach"]
+scale = Vector2( 3, 3 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+visible = false
+position = Vector2( 526.355, 378.789 )
+scale = Vector2( 3, 3 )
